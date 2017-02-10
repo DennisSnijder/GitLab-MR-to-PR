@@ -23,13 +23,13 @@ function handleText(textNode) {
     var v1 = textNode.nodeValue;
 
     var v2 = v1;
-    var randomCode = " Pull Request ";
+    var randomCode = "Pull Request";
 
-    v2 = v2.replace(/ merge request /g, randomCode);
-    v2 = v2.replace(/ Merge request /g, randomCode);
-    v2 = v2.replace(/ Merge Request /g, randomCode);
+    v2 = v2.replace(/merge request/g, randomCode);
+    v2 = v2.replace(/Merge request/g, randomCode);
+    v2 = v2.replace(/Merge Request/g, randomCode);
 
     if (v1 !== v2) {
-        textNode.nodeValue = v2.replace(/ Pull Request /g, " Pull Request ");
+        textNode.nodeValue = v2.replace(/Pull Request/g, "Pull Request");
     }
 }
