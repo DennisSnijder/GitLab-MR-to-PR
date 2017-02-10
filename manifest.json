@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "RenatoMerge",
+  "version": "1.2.0",
+  "description": "Replaces Merge Request to Pull Request because renato didn't like it.",
+  "icons": {
+    "16": "icon16.png"
+  },
+  "browser_action": {
+    "default_icon": "icon16.png"
+  },
+  "web_accessible_resources": [
+    "*.png",
+    "*.wav"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "content_script.js"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}
